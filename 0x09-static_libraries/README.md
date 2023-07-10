@@ -1,1 +1,4 @@
-All projects folders will be found here
+# Project's detail
+Topic: Creating Static Libraries in C
+Languages: C
+
