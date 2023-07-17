@@ -1,18 +1,15 @@
 #include "main.h"
 
 /**
- * _abs - checks number
- * @r: entero recibo por main.
- * Return: Devuelve r cuando es valor absoluto positivo,
+ * _abs - computes the absolute value of an integer
+ * @n: the int to check
+ * Return: the absolute value of int
  */
-int _abs(int r)
+int _abs(int n)
 {
-	if (r >= 0)
+	if (n >= 0)
 	{
-		return (r);
+		return (n);
 	}
-	else
-	{
-		return (-r);
-	}
+	return (-n);
 }
