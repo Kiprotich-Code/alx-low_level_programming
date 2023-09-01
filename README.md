@@ -1,14 +1,9 @@
-# Project's Details
-Language: C
-Level: Begginner
-Author: Kiprotich
-
 # Description
 This a C begginer tutorial, provided by ALX africa towards a 12-months software engineering journey.
 
-# Repo's
-- 0x00-hello_world
-- 0x01-variables_if_else_while
+# Contains
+- 0x00-hello_world : Introduction to C programming.
+- 0x01-variables_if_else_while: 
 - 0x02-functions_nested_loops
 - 0x03-debugging
 - 0x04-more_functions_nested_loops
