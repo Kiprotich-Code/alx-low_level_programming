@@ -1,6 +1,6 @@
 # Details
 
-- This is an advanced tutorial on malloc for c.
+- This is an advanced tutorial on malloc for c. This is a continuation of the previous introductory tutorial on malloc.
 
 # Tasks
 
