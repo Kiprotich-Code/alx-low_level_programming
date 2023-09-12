@@ -11,4 +11,3 @@ This a C begginer tutorial, provided by ALX africa towards a 12-months software 
 - 0x06-pointers_arrays_strings
 - 0x07-pointers_arrays_strings
 - 0x08-recursion
-- 0x09-static_libraries
