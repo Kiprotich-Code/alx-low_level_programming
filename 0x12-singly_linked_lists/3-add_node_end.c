@@ -1,46 +1,54 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 #include "lists.h"
 
 /**
- * main - check the code
+ * add_node_end - function that adds a new node at the end of list.
+ * @head: pointer to singly linked list.
+ * @str: pointer to signly linked list.
  *
- * Return: Always 0.
+ * str needs to be duplicated.
+ * You are allowed to use strdup.
+ *
+ * Return: The address of the new element or NULL if it failed.
+ *
  */
-int main(void)
-{
-    list_t *head;
 
-    head = NULL;
-    add_node_end(&head, "Anne");
-    add_node_end(&head, "Colton");
-    add_node_end(&head, "Corbin");
-    add_node_end(&head, "Daniel");
-    add_node_end(&head, "Danton");
-    add_node_end(&head, "David");
-    add_node_end(&head, "Gary");
-    add_node_end(&head, "Holden");
-    add_node_end(&head, "Ian");
-    add_node_end(&head, "Ian");
-    add_node_end(&head, "Jay");
-    add_node_end(&head, "Jennie");
-    add_node_end(&head, "Jimmy");
-    add_node_end(&head, "Justin");
-    add_node_end(&head, "Kalson");
-    add_node_end(&head, "Kina");
-    add_node_end(&head, "Matthew");
-    add_node_end(&head, "Max");
-    add_node_end(&head, "Michael");
-    add_node_end(&head, "Ntuj");
-    add_node_end(&head, "Philip");
-    add_node_end(&head, "Richard");
-    add_node_end(&head, "Samantha");
-    add_node_end(&head, "Stuart");
-    add_node_end(&head, "Swati");
-    add_node_end(&head, "Timothy");
-    add_node_end(&head, "Victor");
-    add_node_end(&head, "Walton");
-    print_list(head);
-    return (0);
+list_t *add_node_end(list_t **head, const char *str)
+{
+	list_t *new_node, *last;
+	size_t length = 0;
+
+	new_node = malloc(sizeof(list_t));
+	/* if it fails returb NULL */
+	if (new_node == NULL)
+		return (NULL);
+	/* loop through the string to find length */
+	while (str[length])
+		length++;
+	/* access the length of new_node and assign it to length */
+	new_node->len = length;
+	/* access the list of new_node and duplicate it */
+	new_node->str = strdup(str);
+	/* if there is no head/linked list make new_node as head */
+	if (*head == NULL)
+	{
+		new_node->next = *head; /*this step isn't needed really */
+		*head = new_node;
+	}
+	else
+	{	/**
+		 * the new node is going to be the last node so make next,
+		 * of it as NULL
+		 */
+		new_node->next = NULL;
+		last = *head;
+		/* traverse till last node */
+		while (last->next)
+			last = last->next;
+		/* change the next of last node */
+		last->next = new_node;
+	}
+	return (new_node);
 }
