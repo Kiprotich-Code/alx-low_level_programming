@@ -11,3 +11,10 @@ This a C begginer tutorial, provided by ALX africa towards a 12-months software 
 - 0x06-pointers_arrays_strings
 - 0x07-pointers_arrays_strings
 - 0x08-recursion
+- 0x09 : Static Libraries
+- 0x10 : Variadic Functions
+- 0x11 : Printf
+- 0x12 : Singly Linked List
+- 0x13 : More Singly Linked List
+- 0x14 : Bit Manipulation
+- 0x15 : File Input/Output
